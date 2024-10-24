@@ -1,0 +1,249 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #b30909;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-button {
+    background-color: #f53d00;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.menu-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.category-list {
+    width: 200px;
+    padding-right: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.category-item {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-item:hover,
+.category-item.active {
+    background-color: #ff5c04;
+    color: #ffffff;
+}
+
+.content-container {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.menu-item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.menu-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item-image-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.menu-item-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.menu-item-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.menu-item-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.menu-item-price {
+    font-weight: bold;
+    color: #b30909;
+}
+
+.select-item {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cart-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.cart-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.cart-sidebar.open {
+    display: block;
+}
+
+#order-form, #confirmation-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    max-width: 80%;
+    width: 400px;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#cart-total {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#checkout-btn, #modify-order-btn, #send-to-whatsapp, #cancel-order, #close-confirmation {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#checkout-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#modify-order-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+#send-to-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+#cancel-order, #close-confirmation {
+    background-color: #f44336;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#order-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.quantity-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 2px 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.quantity-display {
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        flex-direction: column;
+    }
+
+    .category-list {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;
+    }
+
+    .content-container {
+        padding-left: 0;
+    }
+
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+
+    #order-form, #confirmation-message {
+        width: 90%;
+    }
+}

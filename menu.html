@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laziz Pizza - Menu</title>
+    <link rel="stylesheet" href="menustyles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="home-button">Home</a>
+        <h1>Laziz Pizza Menu</h1>
+        <div id="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-container">
+            <div id="category-sidebar" class="category-list"></div>
+            <div class="content-container">
+                <div id="menu-content" class="menu-content"></div>
+            </div>
+        </div>
+
+        <div id="cart-sidebar" class="cart-sidebar">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total">Total: ₹<span id="total-amount">0.00</span></div>
+            <button id="checkout-btn">Proceed to Checkout</button>
+            <button id="modify-order-btn">Modify Order</button>
+        </div>
+
+        <div id="order-form" class="hidden">
+            <h2>Complete Your Order</h2>
+            <input type="text" id="customer-name" placeholder="Your Name" required>
+            <input type="text" id="customer-address" placeholder="Delivery Address" required>
+            <button id="send-to-whatsapp">Send Order to WhatsApp</button>
+            <button id="cancel-order">Cancel</button>
+        </div>
+
+        <div id="confirmation-message" class="hidden">
+            <h2>Order Sent!</h2>
+            <p>Your order has been sent to WhatsApp. We'll process it shortly.</p>
+            <button id="close-confirmation">Close</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

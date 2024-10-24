@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laziz Pizza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #741f1f;
+            --secondary-color: #f39c12;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --header-bg: #b30909;
+            --header-text: #fff;
+            --cta-bg: #f39c12;
+            --cta-text: #fff;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            margin-left: 20px;
+        }
+
+        .small-logo {
+            width: 100px;
+            height: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--header-text);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        #home {
+            background-image: url('images/hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--header-text);
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        #home .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        /* Call to Action Button */
+        .cta-button {
+            background-color: var(--cta-bg);
+            color: var(--cta-text);
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Offers Section */
+        #offers {
+            background-color: #f0f0f0;
+            padding: 20px 0;
+        }
+
+        .offer-image {
+            max-width: 40%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Social & Contact Section */
+        .social-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 40px 0;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+        }
+
+        .social-section div {
+            text-align: center;
+        }
+
+        .social-section a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .social-section a:hover {
+            transform: translateY(-5px);
+        }
+
+        .social-section img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .social-section .social-text {
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+
+        footer {
+            text-align: center;
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/laziz.png" alt="Laziz Logo" class="small-logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section with Call-to-Action -->
+        <section id="home" class="section">
+            <div class="container">
+                <div class="content">
+                    <h1>Welcome to Laziz Pizza! 🌟</h1>
+                    <h2>Enjoy delicious, 100% halal pizzas made with fresh ingredients and full of flavor..</h2>
+                    <button class="cta-button" onclick="window.location.href='menu.html'">View Menu</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offers Section -->
+        <section id="offers" class="section">
+            <div class="container">
+                <h2>Special Offers</h2>
+                <div id="slideshow-container" class="slideshow-container">
+                    <img src="images/Special Offers.png" alt="Special Offers" class="offer-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact and Social Media Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="social-section">
+                    <div>
+                        <a href="https://www.instagram.com/lazizpizzakaikamba" target="_blank" aria-label="Follow us on Instagram">
+                            <img src="images/instagram-icon.png" alt="Instagram Icon">
+                            <div class="social-text">@lazizpizzakaikamba</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://maps.app.goo.gl/YdavCh3ooacinckA6" target="_blank" aria-label="View our location on Google Maps">
+                            <img src="images/location-icon.png" alt="Location Icon">
+                            <div class="social-text">Kaikamba, Mangalore</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="tel:+91 9019464212" aria-label="Call us at +91 9019464212">
+                            <img src="images/phone-icon.png" alt="Phone Icon">
+                            <div class="social-text">+91 9019464212</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.driftpure.com" class="footer-link" target="_blank">www.driftpure.com</a>
+        <p>© 2024 DriftPure Innovation Pvt. Co. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
